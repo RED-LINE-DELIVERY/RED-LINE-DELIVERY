@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redline Delivery | Parcel Tracking</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#f5f5f5;color:#222}
+header{background:#fff;padding:20px 8%;display:flex;align-items:center;gap:12px;border-bottom:1px solid #eee}
+.logo{background:#d92332;color:#fff;width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:25px}
+.logo-name{font-size:20px;font-weight:bold;color:#d92332}
+.logo-sub{font-size:10px;color:#777;letter-spacing:2px;margin-top:4px}
+.container{max-width:850px;margin:60px auto;padding:20px}
+h1{font-size:30px;margin-bottom:10px}
+.intro{color:#777;margin-bottom:30px;line-height:1.6}
+.tracking-card{background:#fff;padding:30px;border-radius:15px;box-shadow:0 4px 20px rgba(0,0,0,.05)}
+.tracking-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px}
+.status{background:#ffe5e7;color:#d92332;padding:8px 15px;border-radius:30px;font-size:12px;font-weight:bold}
+.hold-box{background:#fff5f5;border:1px solid #ffd8dc;padding:20px;border-radius:12px;display:flex;align-items:center;gap:15px;margin-bottom:40px}
+.spinner{width:35px;height:35px;border:4px solid #ffd4d8;border-top:4px solid #d92332;border-radius:50%;animation:spin 1s linear infinite;flex-shrink:0}
+@keyframes spin{100%{transform:rotate(360deg)}}
+.hold-title{color:#d92332;font-weight:bold;margin-bottom:5px}
+.hold-description{font-size:13px;color:#777;line-height:1.5}
+.progress-container{display:flex;justify-content:space-between;position:relative;margin:30px 0}
+.progress-line{position:absolute;top:22px;left:12%;width:76%;height:4px;background:#e5e5e5;z-index:0}
+.progress-fill{width:0%;height:4px;background:#d92332}
+.step{width:25%;text-align:center;position:relative;z-index:1}
+.step-icon{width:48px;height:48px;background:#eee;color:#999;border-radius:50%;display:flex;justify-content:center;align-items:center;font-size:21px;margin:0 auto 12px}
+.step.active .step-icon{background:#d92332;color:#fff}
+.step.active .step-name{color:#d92332;font-weight:bold}
+.step-name{font-size:12px;color:#888}
+.step-detail{font-size:10px;color:#aaa;margin-top:6px}
+.footer{text-align:center;margin-top:35px;font-size:12px;color:#999;line-height:1.6}
+@media(max-width:600px){
+.container{margin:30px auto;padding:15px}
+.tracking-card{padding:20px 12px}
+h1{font-size:24px}
+.step-icon{width:40px;height:40px;font-size:17px}
+.step-name{font-size:10px}
+.step-detail{font-size:9px}
+.progress-line{top:19px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo" aria-hidden="true">📦</div>
+  <div>
+    <div class="logo-name">REDLINE DELIVERY</div>
+    <div class="logo-sub">PARCEL TRACKING SERVICE</div>
+  </div>
+</header>
+<main class="container">
+  <h1>Track Your Delivery</h1>
+  <p class="intro">Welcome to our delivery tracking service. Follow your parcel's progress and delivery status through every stage of the journey.</p>
+  <section class="tracking-card" aria-label="Delivery progress demonstration">
+    <div class="tracking-header">
+      <h3>Delivery Progress</h3>
+      <span class="status">ON HOLD</span>
+    </div>
+    <div class="hold-box">
+      <div class="spinner" role="img" aria-label="Loading"></div>
+      <div>
+        <div class="hold-title">Your Item Is Currently On Hold</div>
+        <p class="hold-description">Your parcel is awaiting its next processing and delivery update.</p>
+      </div>
+    </div>
+    <div class="progress-container">
+      <div class="progress-line"><div class="progress-fill"></div></div>
+      <div class="step active"><div class="step-icon">📦</div><div class="step-name">On Hold</div><div class="step-detail">Pending</div></div>
+      <div class="step"><div class="step-icon">🚚</div><div class="step-name">Pickup</div><div class="step-detail">Waiting</div></div>
+      <div class="step"><div class="step-icon">🚛</div><div class="step-name">In Transit</div><div class="step-detail">Waiting</div></div>
+      <div class="step"><div class="step-icon">🏠</div><div class="step-name">Your Door</div><div class="step-detail">Delivery</div></div>
+    </div>
+  </section>
+  <footer class="footer">© 2026 REDLINE DELIVERY. All Rights Reserved.<br>Parcel tracking demonstration.</footer>
+</main>
+</body>
+</html>
